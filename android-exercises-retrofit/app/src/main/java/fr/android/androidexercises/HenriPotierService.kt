@@ -1,7 +1,11 @@
 package fr.android.androidexercises
 
+import retrofit2.http.GET
+
 interface HenriPotierService {
     // TODO Method GET books which return a List<Book>
-    //Use the following URL: https://henri-potier.xebia.fr/books with retrofit to get the list of books
-    //https://www.section.io/engineering-education/making-api-requests-using-retrofit-android/
+    @GET("books")
+    fun getListBooks(): List<Book>
+
 }
+
